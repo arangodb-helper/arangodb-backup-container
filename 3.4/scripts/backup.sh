@@ -334,7 +334,7 @@ function main() {
 main();
 EOF
 
-if test "ARANGO_HOSTS" != ""; then
+if test "x$ARANGO_HOSTS" != "x"; then
   echo $ARANGO_HOSTS >> /etc/hosts
   echo "Using /etc/hosts"
   cat /etc/hosts
