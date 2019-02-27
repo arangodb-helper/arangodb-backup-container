@@ -26,5 +26,5 @@ large enough to hold the dump data.
 
 A typical usage is
 
-    docker run -v /some/large/disk:/backup -e ARANGO_ENDPOINT=tcp://server.name:8529 -e ARANGO_USERNAME=root -e ARANGO_PASSWD=abc backup
+    docker run -v /some/large/disk:/backup -e ARANGO_ENDPOINT=tcp://server.name:8529 -e ARANGO_USERNAME=root -e ARANGO_PASSWD=abc arangodb/arangodb-backup backup
 
