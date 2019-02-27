@@ -3,6 +3,10 @@
 This container contains a shell script to dump and restore all
 databases of an ArangoDB server (Single Server or Cluster).
 
+You must be able to reach the server from inside the running
+container. Please refer to the orchestration guide of your
+plattform.
+
 ## Usage
 
 usage: backup.sh (dump|restore) <passthrough options>
