@@ -338,8 +338,15 @@ if test "x$ARANGO_HOSTS" != "x"; then
   echo $ARANGO_HOSTS >> /etc/hosts
   echo "Using /etc/hosts"
   cat /etc/hosts
+  echo
   echo "Using /etc/resolv.conf"
   cat /etc/resolv.conf
+fi
+
+export ARANGO_PASSWD
+
+if test "x$ARANGO_PASSWD_FILE" != "x"; then
+  ARANGO_PASSWD=`cat "$ARANGO_PASSWD_FILE"`
 fi
 
 if test "$1" = "sh"; then
