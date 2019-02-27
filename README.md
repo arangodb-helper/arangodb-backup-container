@@ -7,6 +7,9 @@ You must be able to reach the server from inside the running
 container. Please refer to the orchestration guide of your
 plattform.
 
+It is important to use a user that has access to all database
+you want to dump.
+
 ## Usage
 
 usage: backup.sh (dump|restore) <passthrough options>
@@ -28,3 +31,7 @@ A typical usage is
 
     docker run -v /some/large/disk:/backup -e ARANGO_ENDPOINT=tcp://server.name:8529 -e ARANGO_USERNAME=root -e ARANGO_PASSWD=abc arangodb/arangodb-backup backup
 
+## Other Options
+
+`dump` uses `arangodump` and `restore` uses `arangodump` underneath. See [Backup & Restore](https://docs.arangodb.com/3.4/Manual/BackupRestore/)
+for details about these programs.
