@@ -106,6 +106,10 @@ function getServerVersion(endpoint, username, password) {
        
   let result = executeExternalAndWait("arangosh", args);
   if (result.exit !== 0) {
+    log("======================================================================");
+    log("please check the server enpoint " + endpoint);
+    log("as well as the login credentials");
+    log("======================================================================");
     abort("unable to invoke arangosh: exit code: " + result.exit);
   }
 
